@@ -6,6 +6,11 @@ html {
   color: #999;
 }
 
+.is-validated input:invalid,
+.is-vaidated input[type="checkbox"]:invalid + label::before {
+  border-color: #f33;
+}
+
 .input:invalid,
 input[type="checkbox"]:invalid + label::before {
   border-color: #f33;
@@ -20,6 +25,12 @@ input[type="checkbox"]:invalid + label::before {
 .error-message-highlighted {
   background-color: #c33;
   color: #fff;
+}
+
+.is-validated > .error-message:first-child,
+.is-validated input:invalid + .error-message,
+.is-validated input:invalid + label + .error-message {
+  display: block;
 }
 
 .error-message:first-child,
