@@ -11,9 +11,37 @@
 <body>
 
   <form class="max-length island" method="post" action="#">
+    <div class="error-message error-message-highlighted push island-1-2" role="alert" aria-live="assertive">
+      <h3 class="push-0">
+        <i class="icon i-32"><svg><use xlink:href="images/icons.svg#error" /></svg></i>
+        <span class="icon-label">There are items that require your attention</span>
+      </h3>
+    </div>
+
     <div class="push-1-2">
       <label for="name">Name</label>
-      <input id="name" required>
+      <input id="name" required aria-describeby="name-error">
+      <p class="error-message milli island-1-4 push-0" id="name-error">
+        <i class="icon i-16"><svg><use xlink:href="images/icons.svg#error" /></svg></i>
+        <span class="icon-label">Please provide a name</span>
+    </div>
+
+    <div class="push-1-2">
+      <label for="email">Email</label>
+      <input type="email" id="email" required aria-describeby="name-error">
+      <p class="error-message milli island-1-4 push-0" id="email-error">
+        <i class="icon i-16"><svg><use xlink:href="images/icons.svg#error" /></svg></i>
+        <span class="icon-label">Please provide a name</span>
+    </div>
+
+    <div class="push-1-2">
+      <label for="url">Website <em class="flag-optional milli normal">(optional)</em></label>
+      <input type="url" id="url">
+    </div>
+
+    <div class="push-1-2 pad-t-1-2">
+      <input type="checkbox" id="agree" required>
+      <label for="agree">I'm totally awesome!</label>
     </div>
 
     <div class="pad-t-1-2">
